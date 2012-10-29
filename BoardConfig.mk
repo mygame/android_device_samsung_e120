@@ -29,7 +29,7 @@ USE_CAMERA_STUB := true
 -include device/samsung/msm8660-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
--include vendor/samsung/dali/BoardConfigVendor.mk
+-include vendor/samsung/e120l/BoardConfigVendor.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := dali
 
