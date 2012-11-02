@@ -31,10 +31,10 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/samsung/e120s/BoardConfigVendor.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := dali
+TARGET_BOOTLOADER_BOARD_NAME := MSM8660_SURF
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := SHV-E120S,SGH-I757,dali,SGHI757M,SGHI757
+TARGET_OTA_ASSERT_DEVICE := SHV-E120S
 
 # Kernel
 BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4
