@@ -57,9 +57,8 @@ Remain in ~/android/system for the rest of the commands.
   <remote fetch="http://github.com/" name="gh" revision="master" />
   <project name="CyanogenMod/android_device_samsung_msm8660-common" path="device/samsung/msm8660-common" remote="github" revision="jellybean" />
   <project name="Socim/android_kernel_samsung_msm8660-common" path="kernel/samsung/msm8660-common" revision="jellybean" />
-  <project name="Socim/android_packages_apps_Camera" path="packages/apps/Camera" revision="jellybean" />
-  <project name="Socim/android_device_samsung_dali" path="device/samsung/dali" revision="jellybean" />
-  <project name="Socim/android_vendor_samsung_dali" path="vendor/samsung/dali" revision="jellybean" />
+  <project name="Socim/android_device_samsung_e120" path="device/samsung/e120l" revision="e120l" />
+  <project name="Socim/android_vendor_samsung_e120" path="vendor/samsung/e120l" revision="e120l" />
 </manifest>
 ```
 
@@ -79,7 +78,7 @@ vendor/cm/get-prebuilts
 ### Ready to build!
 ```
 . build/envsetup.sh
-brunch cm_dali-eng
+brunch cm_e120l-eng
 ```
 
 Subsequent builds only require the brunch command above, but if you modified BoardConfig.mk, you'll need to clean out the build output folder before running brunch (in order to pick up its changes). In that case, run this before using brunch:
@@ -91,6 +90,5 @@ make clobber
 ### OPTIONAL: If you want to build ClockworkMod:
 ```
 . build/envsetup.sh
-. build/tools/device/makerecoveries.sh cm_dali-eng 
+. build/tools/device/makerecoveries.sh cm_e120l-eng 
 ```
-
