@@ -154,7 +154,6 @@ ro.ril.enable.a52=1
 ro.ril.enable.a53=1
 ro.ril.enable.dtm=1
 
-
 # Additional Tweaks
 ro.config.hw_camera_resize=true
 ro.config.dualmic=true
@@ -162,6 +161,6 @@ ro.service.swiqi.supported=true
 persist.service.swiqi.enable=1
 #ro.ril.disable.power.collapse=1
 ro.ril.def.agps.mode=2
-ro.camera.preview=true
+#ro.camera.preview=true
 ro.ril.enable.korea.stk=1
 

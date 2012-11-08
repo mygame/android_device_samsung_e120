@@ -37,7 +37,7 @@ TARGET_BOOTLOADER_BOARD_NAME := dali
 TARGET_OTA_ASSERT_DEVICE := SHV-E120L,SGH-I757,dali,SGHI757M,SGHI757
 
 # Kernel
-BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4
+BOARD_KERNEL_CMDLINE        := androidboot.hardware=qcom msm_watchdog.appsbark=0 msm_watchdog.enable=1 loglevel=4 usb_id_pin_rework=true no_console_suspend=true zcache
 BOARD_KERNEL_BASE           := 0x48000000
 BOARD_KERNEL_PAGESIZE       := 2048
 BOARD_FORCE_RAMDISK_ADDRESS := 0x49500000
