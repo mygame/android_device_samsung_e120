@@ -99,7 +99,7 @@ persist.radio.add_power_save=1
 persist.radio.snapshot_disabled=1
 
 # notify vold we have internal and external sd
-ro.additionalmounts=/mnt/emmc
+ro.additionalmounts=/mnt/external_sd
 ro.vold.switchablepair=/mnt/sdcard,/mnt/emmc
 
 # set mass storage to default
