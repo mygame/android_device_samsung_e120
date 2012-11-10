@@ -1,4 +1,4 @@
-## Build Instructions for E120L
+## Build Instructions for E120L_PA
 
 ### Prepare Build environment
 
@@ -38,7 +38,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 2) cd ~/android/system
 3) curl https://dl-ssl.google.com/dl/googlesource/git-repo/repo > ~/bin/repo
 4) chmod a+x ~/bin/repo
-5) repo init -u git://github.com/CyanogenMod/android.git -b jellybean
+5) repo init -u git://github.com/Socim/android.git -b jellybean
 ```
 
 ### No longer needs, but you may want to read.
@@ -57,7 +57,9 @@ Remain in ~/android/system for the rest of the commands.
   <remote fetch="http://github.com/" name="gh" revision="master" />
   <project name="CyanogenMod/android_device_samsung_msm8660-common" path="device/samsung/msm8660-common" remote="github" revision="jellybean" />
   <project name="Socim/android_kernel_samsung_msm8660-common" path="kernel/samsung/msm8660-common" revision="jellybean" />
-  <project name="Socim/android_device_samsung_e120" path="device/samsung/e120l" revision="e120l" />
+  <project name="Socim/android_bootable_recovery" path="bootable/recovery" revision="jellybean" />
+  <project name="Socim/android_packages_apps_Camera" path="packages/apps/Camera" revision="jellybean" />
+  <project name="Socim/android_device_samsung_e120" path="device/samsung/e120l" revision="e120l_pa" />
   <project name="Socim/android_vendor_samsung_e120" path="vendor/samsung/e120l" revision="e120l" />
 </manifest>
 ```
@@ -70,7 +72,7 @@ repo sync -j16
 
 
 
-### Get all the prebuilts, like ROM Manager:
+### Get all the prebuilts:
 ```
 vendor/cm/get-prebuilts
 ```
@@ -78,7 +80,7 @@ vendor/cm/get-prebuilts
 ### Ready to build!
 ```
 . build/envsetup.sh
-brunch cm_e120l-eng
+brunch pa_e120l-eng
 ```
 
 Subsequent builds only require the brunch command above, but if you modified BoardConfig.mk, you'll need to clean out the build output folder before running brunch (in order to pick up its changes). In that case, run this before using brunch:
@@ -90,5 +92,5 @@ make clobber
 ### OPTIONAL: If you want to build ClockworkMod:
 ```
 . build/envsetup.sh
-. build/tools/device/makerecoveries.sh cm_e120l-eng 
+. build/tools/device/makerecoveries.sh pa_e120l-eng 
 ```
